@@ -1,0 +1,12 @@
+  <div class="digital-clock">
+    <div> {{hour}} : {{minute}} : {{second}} {{ampm}}</div>
+
+    <form [formGroup]="form">
+      <div class="form-group">
+        <input type="time" formControlName="selectTime"/>    
+        <button (click)="synchronize()" [disabled]="isSynchronizeDisabled()">Synchronize</button>  
+      </div>   
+    </form>
+  </div>
+<span>synchronize digital with analog clock by {{millisecond}} milliseconds</span>
+
